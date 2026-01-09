@@ -1,292 +1,688 @@
-:root{
-  --bg0:#070A12;
-  --bg1:#0B1020;
-  --card: rgba(255,255,255,0.06);
-  --border: rgba(255,255,255,0.10);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.68);
-  --shadow: 0 14px 40px rgba(0,0,0,0.45);
-  --radius: 18px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kushal Kandel | Portfolio</title>
+  <meta name="description" content="Kushal Kandel — Computing Science. Software Engineering, AI/NLP, Mobile, Databases. AI/ML Internship + web/IT admin + night manager experience." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  --accentA: #7C3AED;   /* purple */
-  --accentB: #22C55E;   /* green  */
-  --accentC: #38BDF8;   /* blue   */
-}
+<body>
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Kushal Kandel</span>
+      </a>
 
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(1200px 700px at 15% 10%, rgba(124,58,237,0.18), transparent 60%),
-    radial-gradient(900px 600px at 80% 20%, rgba(56,189,248,0.14), transparent 55%),
-    radial-gradient(1100px 700px at 55% 85%, rgba(34,197,94,0.12), transparent 60%),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
-}
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#projects">Projects</a>
+        <a href="#employment">Employment</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-a{ color:inherit; }
-.container{ width:min(1100px, 92%); margin:0 auto; }
+      <div class="nav-cta">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <a class="btn btn-ghost" href="https://github.com/og-kushal" target="_blank" rel="noreferrer">GitHub</a>
+        <!-- Add later if you want -->
+        <!-- <a class="btn" href="https://linkedin.com/in/YOUR-LINK" target="_blank" rel="noreferrer">LinkedIn</a> -->
+      </div>
+    </div>
+  </header>
 
-/* Topbar */
-.topbar{
-  position: sticky;
-  top:0;
-  z-index: 50;
-  backdrop-filter: blur(12px);
-  background: rgba(7,10,18,0.68);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:14px 0;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-  font-weight:800;
-  letter-spacing:0.2px;
-}
-.brand-dot{
-  width:10px;height:10px;border-radius:999px;
-  background: linear-gradient(135deg, var(--accentA), var(--accentC));
-  box-shadow: 0 0 0 4px rgba(124,58,237,0.15);
-}
-.brand-name{ white-space:nowrap; }
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-left reveal">
+          <div class="pill">
+            <span class="pill-icon">🚀</span>
+            Graduate-ready • Software • AI/NLP • Mobile • Databases
+          </div>
 
-.nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  justify-content:center;
-}
-.nav a{
-  text-decoration:none;
-  color:var(--muted);
-  font-size:14px;
-  padding:8px 10px;
-  border-radius:999px;
-  border:1px solid transparent;
-}
-.nav a:hover{
-  color:var(--text);
-  border-color: rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-}
-.nav-cta{ display:flex; gap:10px; }
-@media (max-width: 980px){
-  .nav-cta{ display:none; }
-}
+          <h1 class="hero-title">
+            Colorful, employer-ready portfolio — practical projects + real-world experience.
+          </h1>
 
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  text-decoration:none;
-  padding:10px 14px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.14);
-  background: linear-gradient(135deg, rgba(124,58,237,0.22), rgba(56,189,248,0.16));
-  box-shadow: var(--shadow);
-  font-weight:700;
-  transition: transform .08s ease, filter .2s ease;
-}
-.btn:hover{ filter: brightness(1.08); transform: translateY(-1px); }
-.btn:active{ transform: translateY(0); }
-.btn-ghost{
-  background: rgba(255,255,255,0.04);
-  box-shadow:none;
-}
+          <p class="hero-subtitle">
+            I build systems end-to-end: from requirements and design to implementation, testing, and deployment.
+            I completed an 8-week AI/ML internship (NLP summarization project), develop and manage a charity website,
+            and work night operations leadership in hospitality.
+          </p>
 
-/* Hero */
-.hero{ position:relative; padding:44px 0 10px; }
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap:18px;
-  align-items:start;
-}
-@media (max-width: 900px){
-  .hero-grid{ grid-template-columns: 1fr; }
-}
-.hero-glow{
-  position:absolute;
-  inset: 0;
-  pointer-events:none;
-  background: radial-gradient(700px 240px at 25% 15%, rgba(124,58,237,0.16), transparent 60%);
-  opacity:0.95;
-}
+          <div class="hero-actions">
+            <a class="btn" href="#projects">Explore Projects</a>
+            <a class="btn btn-ghost" href="#employment">Employment</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
 
-.pill{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.04);
-  color: var(--muted);
-  width: fit-content;
-}
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num">8 weeks</div>
+              <div class="stat-label">AI/ML internship</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">96%</div>
+              <div class="stat-label">AI module</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Web</div>
+              <div class="stat-label">Charity site admin</div>
+            </div>
+          </div>
+        </div>
 
-.hero-title{
-  margin:16px 0 10px;
-  font-size: clamp(30px, 4vw, 54px);
-  line-height:1.08;
-  letter-spacing:-0.6px;
-}
-.hero-subtitle{
-  margin:0 0 18px;
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 62ch;
-}
-.hero-actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:18px;
-}
-.hero-stats{
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap:10px;
-}
-.stat{
-  padding:12px;
-  border-radius:16px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-}
-.stat-num{ font-size:18px; font-weight:900; }
-.stat-label{ font-size:13px; color: var(--muted); }
+        <div class="hero-right reveal">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="hero-badge">Featured</div>
+              <div class="hero-mini">Best work at a glance</div>
+            </div>
 
-/* Hero right */
-.hero-card{
-  border-radius: 22px;
-  border:1px solid rgba(255,255,255,0.12);
-  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-  box-shadow: var(--shadow);
-  overflow:hidden;
-}
-.hero-card-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  padding:14px 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.03);
-}
-.hero-badge{
-  font-size:12px;
-  font-weight:900;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background: rgba(124,58,237,0.18);
-}
-.hero-mini{ color: var(--muted); font-size: 12px; }
-.hero-card-body{ padding:14px 16px 16px; }
+            <div class="hero-card-body">
+              <div class="mini-card">
+                <div class="mini-icon gradient-a">🧠</div>
+                <div>
+                  <div class="mini-title">AI/ML Internship Project</div>
+                  <div class="mini-sub">Extractive Text Summarization (NLP)</div>
+                </div>
+              </div>
 
-.mini-card{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  padding:12px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-  margin-bottom:10px;
-}
-.mini-icon{
-  width:38px;height:38px;border-radius:14px;
-  display:grid;place-items:center;
-  background: linear-gradient(135deg, rgba(34,197,94,0.18), rgba(56,189,248,0.14));
-  border:1px solid rgba(255,255,255,0.10);
-}
-.mini-title{ font-weight:900; }
-.mini-sub{ color: var(--muted); font-size:13px; }
-.hero-card-footer{ margin-top:6px; }
+              <div class="mini-card">
+                <div class="mini-icon gradient-b">📚</div>
+                <div>
+                  <div class="mini-title">Dissertation Research</div>
+                  <div class="mini-sub">Lexical Chains for LLM Text</div>
+                </div>
+              </div>
 
-.hero-strip{
-  margin-top: 12px;
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:12px;
-}
-.strip-item{
-  padding:12px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.03);
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-}
-.strip-icon{
-  width:34px;height:34px;border-radius:14px;
-  display:grid;place-items:center;
-  background: rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.10);
-}
-.strip-title{ font-weight:900; }
-.strip-sub{ color: var(--muted); font-size: 13px; }
+              <div class="mini-card">
+                <div class="mini-icon gradient-c">📱</div>
+                <div>
+                  <div class="mini-title">Android Diary App</div>
+                  <div class="mini-sub">Fragments • Room • MVVM</div>
+                </div>
+              </div>
 
-/* Sections */
-.section{ padding: 22px 0; }
-.section-head{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:14px;
-  margin-bottom:12px;
-}
-.section-head h2{ margin:0; font-size: 22px; letter-spacing:-0.2px; }
-.section-head p{ margin:0; color: var(--muted); font-size: 14px; }
+              <div class="mini-card">
+                <div class="mini-icon gradient-d">🎮</div>
+                <div>
+                  <div class="mini-title">2D Platform Game</div>
+                  <div class="mini-sub">Tile maps • Parallax • MIDI</div>
+                </div>
+              </div>
 
-/* Cards */
-.card{
-  border-radius: var(--radius);
-  border:1px solid rgba(255,255,255,0.12);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  padding:18px;
-}
-.card h3{ margin:0 0 10px; }
-.muted{ color: var(--muted); }
-.small{ font-size: 13px; }
+              <div class="hero-card-footer">
+                <a class="link" href="#highlights">Jump to highlights →</a>
+              </div>
+            </div>
+          </div>
 
-.grid-1{ display:grid; gap:14px; grid-template-columns: 1fr; }
-.grid-2{
-  display:grid; gap:14px;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-}
-@media (max-width: 900px){ .grid-2{ grid-template-columns: 1fr; } }
-.grid-3{
-  display:grid; gap:14px;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-}
-@media (max-width: 980px){ .grid-3{ grid-template-columns: 1fr; } }
+          <div class="quick-row">
+            <a class="quick-card reveal" href="#employment">
+              <div class="quick-icon">💼</div>
+              <div>
+                <div class="quick-title">Employment</div>
+                <div class="quick-sub">Night Manager • IT Admin • Internship</div>
+              </div>
+              <span class="quick-go">→</span>
+            </a>
 
-.chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
-.chip{
-  font-size: 13px;
-  color: var(--text);
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-}
+            <a class="quick-card reveal" href="#awards">
+              <div class="quick-icon">🏅</div>
+              <div>
+                <div class="quick-title">Awards</div>
+                <div class="quick-sub">Bronze Award • AI 96% • Certificate</div>
+              </div>
+              <span class="quick-go">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Accent cards */
-.accent{
-  background: linear-gradient(135deg, rgba(12
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>About</h2>
+          <p>What I bring to a team.</p>
+        </div>
+
+        <div class="card reveal">
+          <p>
+            I’m a Computing Science student who enjoys building practical systems and explaining technical work clearly.
+            My projects cover Android apps, databases, software engineering, AI/NLP, and interactive game development.
+          </p>
+          <p class="muted">
+            I’m actively looking for graduate / internship roles where I can contribute as a developer or technical engineer,
+            learn fast, and deliver clean, testable code with strong documentation.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Software Engineering</span>
+            <span class="chip">AI / NLP</span>
+            <span class="chip">Android</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Git/GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Skills</h2>
+          <p>Tools and concepts used across my work.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3>Languages</h3>
+            <div class="chips">
+              <span class="chip">Java</span>
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Tools & Platforms</h3>
+            <div class="chips">
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Android Studio</span>
+              <span class="chip">Eclipse</span>
+              <span class="chip">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>Software Engineering</h3>
+            <div class="chips">
+              <span class="chip">OOP</span>
+              <span class="chip">Unit Testing</span>
+              <span class="chip">Architecture</span>
+              <span class="chip">Team Collaboration</span>
+              <span class="chip">Documentation</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3>AI / Data</h3>
+            <div class="chips">
+              <span class="chip">NLP</span>
+              <span class="chip">Summarization</span>
+              <span class="chip">WordNet (Research)</span>
+              <span class="chip">Aggregation Pipelines</span>
+              <span class="chip">Evaluation Mindset</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section id="highlights" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Highlights</h2>
+          <p>High-impact academic + internship work.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card accent reveal">
+            <div class="card-top">
+              <span class="tag">Internship</span>
+              <span class="tag tag-strong">AI / ML</span>
+            </div>
+            <h3>Innovate Interns — AI & Machine Learning</h3>
+            <p class="muted">
+              8-week internship (12-May-2025 to 07-Jul-2025). Completed and submitted a project:
+              <strong>“Extractive Text Summarization using NLP Techniques.”</strong>
+            </p>
+            <ul class="bullets">
+              <li>Applied NLP techniques for extractive summarization</li>
+              <li>Delivered project submission to requirements</li>
+              <li>Professional workflow: deadlines, reporting, documentation</li>
+            </ul>
+            <p class="muted small">Certificate No: <strong>INNOVATE/AIML/000590</strong></p>
+          </article>
+
+          <article class="card accent reveal">
+            <div class="card-top">
+              <span class="tag">AI</span>
+              <span class="tag tag-strong">96%</span>
+            </div>
+            <h3>Artificial Intelligence (Module)</h3>
+            <p class="muted">
+              Strong performance demonstrating a solid understanding of AI foundations and problem-solving.
+            </p>
+            <ul class="bullets">
+              <li>Search strategies + heuristic reasoning</li>
+              <li>Evaluation and limitations awareness</li>
+              <li>Clear explanation of methods and results</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card accent2 reveal">
+          <div class="card-top">
+            <span class="tag">Research</span>
+            <span class="tag tag-strong">Dissertation</span>
+          </div>
+          <h3>Lexical Chains for LLM-Generated Text</h3>
+          <p class="muted">
+            Researching lexical cohesion in LLM output using lexical chains to measure semantic continuity and coherence
+            across generated narratives.
+          </p>
+          <ul class="bullets">
+            <li>WordNet-based lexical chain construction and analysis</li>
+            <li>Evaluation pipeline for cohesion/continuity</li>
+            <li>Comparison of symbolic vs embedding-based cohesion signals</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">NLP</span>
+            <span class="chip">WordNet</span>
+            <span class="chip">LLM Text Analysis</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS (Interactive Filter) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Projects</h2>
+          <p>Filter projects by category.</p>
+        </div>
+
+        <div class="filters reveal" id="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="ai">AI</button>
+          <button class="filter" data-filter="mobile">Mobile</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="db">Databases</button>
+          <button class="filter" data-filter="game">Game</button>
+          <button class="filter" data-filter="se">Software Eng</button>
+        </div>
+
+        <div class="grid-3" id="projectGrid">
+          <article class="project-card featured reveal" data-tags="game">
+            <div class="project-head">
+              <div>
+                <h3>2D Platform Game (Mario Prototype)</h3>
+                <div class="muted small">CSCU9N6 • Tile Maps • Parallax • MIDI</div>
+              </div>
+              <span class="badge">Featured</span>
+            </div>
+            <p class="muted">
+              2D platform game with animated sprites, robust collisions, interactive tile maps (2+ levels),
+              parallax scrolling, and audio integration (MIDI theme + sound filter).
+            </p>
+            <div class="chips">
+              <span class="chip">Java</span><span class="chip">Tile maps</span><span class="chip">Collision</span><span class="chip">Parallax</span><span class="chip">MIDI</span>
+            </div>
+            <div class="card-links">
+              <a class="link disabled" href="#" aria-disabled="true">Demo (add later)</a>
+              <a class="link disabled" href="#" aria-disabled="true">Code (upload later)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="mobile">
+            <div class="project-head">
+              <div>
+                <h3>Android Diary App</h3>
+                <div class="muted small">Fragments • Room • MVVM • RecyclerView</div>
+              </div>
+            </div>
+            <p class="muted">
+              Multi-fragment Android app for creating and managing diary entries with Room persistence, SharedViewModel
+              communication, and RecyclerView-based display.
+            </p>
+            <div class="chips">
+              <span class="chip">Java</span><span class="chip">Android</span><span class="chip">Room</span><span class="chip">MVVM</span>
+            </div>
+            <div class="card-links">
+              <a class="link disabled" href="#" aria-disabled="true">Demo (add later)</a>
+              <a class="link disabled" href="#" aria-disabled="true">Code (upload later)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="db">
+            <div class="project-head">
+              <div>
+                <h3>NoSQL Movies Analytics</h3>
+                <div class="muted small">MongoDB • Aggregation Pipeline • myScore</div>
+              </div>
+            </div>
+            <p class="muted">
+              Built queries + aggregation pipelines on MongoDB sample_mflix dataset, including animal-related filtering and a
+              custom ranking metric (<strong>myScore</strong>) combining multiple rating sources.
+            </p>
+            <div class="chips">
+              <span class="chip">MongoDB</span><span class="chip">Aggregation</span><span class="chip">Data querying</span>
+            </div>
+            <div class="card-links">
+              <a class="link disabled" href="#" aria-disabled="true">Report (private)</a>
+              <a class="link disabled" href="#" aria-disabled="true">Queries (upload later)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="se">
+            <div class="project-head">
+              <div>
+                <h3>Software Engineering Group Project</h3>
+                <div class="muted small">Backend • Testing • Collaboration</div>
+              </div>
+            </div>
+            <p class="muted">
+              Backend contribution: participant registration/booking logic, notification system, lifecycle launcher,
+              classroom scheduling support, and unit tests. Worked via GitHub in a team workflow.
+            </p>
+            <div class="chips">
+              <span class="chip">Java</span><span class="chip">OOP</span><span class="chip">Unit tests</span><span class="chip">Teamwork</span>
+            </div>
+            <div class="card-links">
+              <a class="link disabled" href="#" aria-disabled="true">Repo (private)</a>
+              <a class="link disabled" href="#" aria-disabled="true">Notes</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="ai">
+            <div class="project-head">
+              <div>
+                <h3>AI/ML Internship Project</h3>
+                <div class="muted small">Extractive Text Summarization (NLP)</div>
+              </div>
+            </div>
+            <p class="muted">
+              Internship project implementing extractive summarization using NLP techniques. Delivered final submission and completion certificate.
+            </p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">Summarization</span>
+            </div>
+            <div class="card-links">
+              <a class="link disabled" href="#" aria-disabled="true">Report (add later)</a>
+              <a class="link disabled" href="#" aria-disabled="true">Code (add later)</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-tags="web">
+            <div class="project-head">
+              <div>
+                <h3>Charity Website Development & Management</h3>
+                <div class="muted small">Bhimukot Sports • Website Admin</div>
+              </div>
+            </div>
+            <p class="muted">
+              Developed and manage the Bhimukot Sports charity website, handling updates, content structure, and ongoing maintenance.
+            </p>
+            <div class="chips">
+              <span class="chip">Web</span><span class="chip">Content</span><span class="chip">Maintenance</span>
+            </div>
+            <div class="card-links">
+              <a class="link disabled" href="#" aria-disabled="true">Live link (add)</a>
+              <a class="link disabled" href="#" aria-disabled="true">Details (add)</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout reveal">
+          <div class="callout-icon">✨</div>
+          <div>
+            <strong>Tip:</strong> Add 1–2 screenshots for Android + Game and this becomes “recruiter wow” level.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPLOYMENT (NOT missing) -->
+    <section id="employment" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Employment</h2>
+          <p>Your professional roles + verified internship.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3>IT Administrator (Part-time) — Bhimukot Sports (Charitable Organisation)</h3>
+                <span class="muted small">Current</span>
+              </div>
+              <p class="muted">
+                Develop and manage the charity website, ensuring information is accurate, accessible, and regularly updated for rural sports initiatives.
+              </p>
+              <ul class="bullets">
+                <li>Website development and ongoing maintenance (structure, content updates, improvements)</li>
+                <li>Supported communications and digital presence for community activities</li>
+                <li>Improved reliability and clarity of online information and resources</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Website admin</span><span class="chip">Documentation</span><span class="chip">Support</span><span class="chip">Community impact</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3>Night Manager — Macdonald Inchyra Hotel</h3>
+                <span class="muted small">Current</span>
+              </div>
+              <p class="muted">
+                Lead overnight operations, ensuring safety, service continuity, compliance, and effective handovers between shifts.
+              </p>
+              <ul class="bullets">
+                <li>Managed incidents calmly and resolved guest/staff issues under pressure</li>
+                <li>Performed security checks, reporting, and shift handover documentation</li>
+                <li>Maintained service standards and supported team coordination</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Leadership</span><span class="chip">Operations</span><span class="chip">Incident handling</span><span class="chip">Customer service</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <h3>AI & Machine Learning Intern — Innovate Interns</h3>
+                <span class="muted small">12-May-2025 → 07-Jul-2025 (8 weeks)</span>
+              </div>
+              <p class="muted">
+                Completed an 8-week internship in AI/ML and delivered the project:
+                <strong>Extractive Text Summarization using NLP Techniques</strong>.
+              </p>
+              <ul class="bullets">
+                <li>Applied NLP techniques to produce extractive summaries from text</li>
+                <li>Delivered project submission and met all internship requirements</li>
+                <li>Followed professional workflow: deadlines, documentation, completion certificate</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">AI/ML</span><span class="chip">NLP</span><span class="chip">Delivery</span><span class="chip">Professional practice</span>
+              </div>
+              <p class="muted small">Certificate No: <strong>INNOVATE/AIML/000590</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS (NOT missing) -->
+    <section id="awards" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Awards & Achievements</h2>
+          <p>Verified wins and milestones.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="award-top">
+              <span class="award-icon gradient-b">🏅</span>
+              <span class="tag tag-strong">Award</span>
+            </div>
+            <h3>University of Stirling — Bronze Award</h3>
+            <p class="muted">
+              Completed the Bronze Award recognising development beyond academics (skills, engagement, employability).
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="award-top">
+              <span class="award-icon gradient-a">🧠</span>
+              <span class="tag tag-strong">Academic</span>
+            </div>
+            <h3>Artificial Intelligence — 96%</h3>
+            <p class="muted">
+              High performance demonstrating strong understanding and applied problem solving in AI.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="award-top">
+              <span class="award-icon gradient-c">📜</span>
+              <span class="tag tag-strong">Certificate</span>
+            </div>
+            <h3>Innovate Interns — Internship Completion</h3>
+            <p class="muted">
+              Completed an 8-week AI/ML internship and submitted “Extractive Text Summarization using NLP Techniques”.
+            </p>
+            <p class="muted small">Certificate No: <strong>INNOVATE/AIML/000590</strong></p>
+          </article>
+        </div>
+
+        <div class="callout reveal">
+          <div class="callout-icon">🎯</div>
+          <div>
+            <strong>Employer tip:</strong> Add the Bhimukot Sports website link and 1 screenshot — it becomes instantly credible.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Contact</h2>
+          <p>Make it easy to reach you.</p>
+        </div>
+
+        <div class="card contact-card reveal">
+          <div class="contact-row">
+            <div>
+              <div class="muted small">Email</div>
+              <div class="contact-strong">YOUR_EMAIL_HERE</div>
+              <div class="muted small">Replace YOUR_EMAIL_HERE below too (mailto link).</div>
+            </div>
+            <a class="btn" href="mailto:YOUR_EMAIL_HERE">Email me</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="contact-row">
+            <div>
+              <div class="muted small">GitHub</div>
+              <a class="contact-strong link" href="https://github.com/og-kushal" target="_blank" rel="noreferrer">
+                github.com/og-kushal
+              </a>
+            </div>
+            <a class="btn btn-ghost" href="https://github.com/og-kushal" target="_blank" rel="noreferrer">Open GitHub</a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p>© <span id="year"></span> Kushal Kandel • Built with GitHub Pages</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- INTERACTIVITY -->
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme toggle (dark/light)
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
+    themeIcon.textContent = (document.documentElement.getAttribute("data-theme") === "light") ? "☀️" : "🌙";
+
+    themeToggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      themeIcon.textContent = (next === "light") ? "☀️" : "🌙";
+    });
+
+    // Scrollspy active nav link
+    const navLinks = [...document.querySelectorAll(".nav a")];
+    const sections = navLinks
+      .map(a => document.querySelector(a.getAttribute("href")))
+      .filter(Boolean);
+
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = "#" + entry.target.id;
+        navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === id));
+      });
+    }, { root: null, threshold: 0.35 });
+
+    sections.forEach(sec => spy.observe(sec));
+
+    // Reveal animations
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("in");
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Project filter buttons
+    const filters = document.querySelectorAll(".filter");
+    const projectCards = document.querySelectorAll("#projectGrid .project-card");
+
+    filters.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filters.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const f = btn.dataset.filter;
+        projectCards.forEach(card => {
+          const tags = (card.dataset.tags || "").split(" ");
+          const show = (f === "all") || tags.includes(f);
+          card.style.display = show ? "" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
