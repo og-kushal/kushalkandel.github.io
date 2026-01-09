@@ -1,35 +1,148 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kushal | IT Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Hello, I’m Kushal</h1>
-  <p>A beginner IT student building skills step by step.</p>
+  <header class="header">
+    <div class="container">
+      <h1>Kushal Kandel</h1>
+      <p class="subtitle">IT / Computing Student • Building projects step by step</p>
 
-  <h2>About Me</h2>
-  <p>
-    I am starting my journey in IT and software development.
-    This portfolio will show my learning and projects.
-  </p>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML (Beginner)</li>
-    <li>GitHub</li>
-    <li>Problem Solving</li>
-  </ul>
+      <div class="cta">
+        <a class="btn" href="https://github.com/og-kushal" target="_blank" rel="noreferrer">GitHub</a>
+        <!-- Optional: add LinkedIn later -->
+        <!-- <a class="btn btn-outline" href="https://linkedin.com/in/YOUR-LINK" target="_blank" rel="noreferrer">LinkedIn</a> -->
+      </div>
+    </div>
+  </header>
 
-  <h2>Projects</h2>
-  <p>Projects coming soon.</p>
+  <main class="container">
 
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Kushal. I’m building my IT portfolio by learning the fundamentals and creating small projects consistently.
+        I’m interested in software development and practical problem solving. This website will keep improving as I add more projects.
+      </p>
+      <p class="note">
+        ✅ Tip: Later, replace this paragraph with your real focus (e.g., Java, Python, Android, Web, Security).
+      </p>
+    </section>
 
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+
+      <div class="grid">
+        <div class="chip-group">
+          <h3>Technical</h3>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Git (basic)</span>
+          </div>
+        </div>
+
+        <div class="chip-group">
+          <h3>Core Strengths</h3>
+          <div class="chips">
+            <span class="chip">Problem Solving</span>
+            <span class="chip">Communication</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Learning Fast</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project-top">
+            <h3>Portfolio Website (This site)</h3>
+            <span class="tag">HTML • CSS • GitHub Pages</span>
+          </div>
+          <p>
+            My first published website using GitHub Pages. It will be updated as I build more projects.
+          </p>
+          <div class="project-links">
+            <a href="https://kushalkandel.github.io" target="_blank" rel="noreferrer">Live Site</a>
+            <a href="https://github.com/og-kushal/kushalkandel.github.io" target="_blank" rel="noreferrer">Source Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <h3>Beginner Project (Coming soon)</h3>
+            <span class="tag">Add your next project</span>
+          </div>
+          <p>
+            I’m currently working on my next small project (e.g., calculator, to-do list, or guessing game).
+          </p>
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Demo</a>
+            <a href="#" class="disabled" aria-disabled="true">Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <h3>Another Project (Coming soon)</h3>
+            <span class="tag">Future project</span>
+          </div>
+          <p>
+            This slot will be replaced with a real project once I finish building it.
+          </p>
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Demo</a>
+            <a href="#" class="disabled" aria-disabled="true">Code</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        ✅ Tip: Even small projects count. 2–3 good projects is enough for a starter portfolio.
+      </p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>You can reach me here:</p>
+
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <span class="muted">your@email.com</span> (replace this)</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/og-kushal" target="_blank" rel="noreferrer">github.com/og-kushal</a></li>
+        <!-- Optional LinkedIn -->
+        <!-- <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" rel="noreferrer">linkedin.com/in/YOUR-LINK</a></li> -->
+      </ul>
+
+      <p class="note">
+        ✅ Tip: Replace the email and (optional) add LinkedIn later.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Kushal Kandel • Built with GitHub Pages</p>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
