@@ -1,207 +1,319 @@
-:root {
-  --bg: #0b0f19;
-  --card: rgba(255, 255, 255, 0.08);
-  --card-border: rgba(255, 255, 255, 0.12);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.7);
-  --shadow: 0 12px 30px rgba(0,0,0,0.35);
-  --radius: 18px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kushal Kandel | IT Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-* { box-sizing: border-box; }
+  <header class="header">
+    <div class="container">
+      <h1>Kushal Kandel</h1>
+      <p class="subtitle">Computing Science student • Software + AI + Mobile + Databases</p>
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(1200px 700px at 15% 10%, rgba(255,255,255,0.10), transparent 60%),
-    radial-gradient(900px 600px at 90% 25%, rgba(255,255,255,0.08), transparent 55%),
-    var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#ai">AI</a>
+        <a href="#research">Research</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-.container {
-  width: min(980px, 92%);
-  margin: 0 auto;
-}
+      <div class="cta">
+        <a class="btn" href="https://github.com/og-kushal" target="_blank" rel="noreferrer">GitHub</a>
+        <!-- Optional: add LinkedIn later -->
+        <!-- <a class="btn btn-outline" href="https://linkedin.com/in/YOUR-LINK" target="_blank" rel="noreferrer">LinkedIn</a> -->
+      </div>
+    </div>
+  </header>
 
-.header { padding: 54px 0 28px; }
+  <main class="container">
 
-.header h1 {
-  margin: 0 0 8px;
-  font-size: clamp(28px, 4vw, 44px);
-  letter-spacing: 0.3px;
-}
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I’m a Computing Science student building practical software projects and strengthening my foundations in
+        software engineering, mobile development, databases, and AI. I enjoy turning requirements into working systems
+        and writing clean, testable code.
+      </p>
+      <p class="note">
+        This portfolio showcases selected work from modules including Mobile App Development, Artificial Intelligence,
+        Software Engineering (group project), game development, and NoSQL databases.
+      </p>
+    </section>
 
-.subtitle {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 16px;
-}
+    <!-- SKILLS -->
+    <section id="skills" class="card">
+      <h2>Skills</h2>
 
-.nav {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin: 16px 0 22px;
-}
+      <div class="grid">
+        <div class="chip-group">
+          <h3>Languages</h3>
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+          </div>
+        </div>
 
-.nav a {
-  color: var(--muted);
-  text-decoration: none;
-  padding: 8px 12px;
-  border: 1px solid var(--card-border);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.04);
-  transition: transform 0.08s ease, background 0.2s ease;
-}
+        <div class="chip-group">
+          <h3>Tools & Platforms</h3>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Android Studio</span>
+            <span class="chip">Eclipse</span>
+            <span class="chip">MongoDB</span>
+          </div>
+        </div>
 
-.nav a:hover {
-  background: rgba(255,255,255,0.09);
-  transform: translateY(-1px);
-}
+        <div class="chip-group">
+          <h3>Core Concepts</h3>
+          <div class="chips">
+            <span class="chip">OOP</span>
+            <span class="chip">Unit Testing</span>
+            <span class="chip">MVC/MVVM</span>
+            <span class="chip">Data Modelling</span>
+            <span class="chip">Problem Solving</span>
+          </div>
+        </div>
 
-.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+        <div class="chip-group">
+          <h3>Interests</h3>
+          <div class="chips">
+            <span class="chip">Mobile Apps</span>
+            <span class="chip">AI / NLP</span>
+            <span class="chip">Databases</span>
+            <span class="chip">Security Awareness</span>
+            <span class="chip">Software Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--text);
-  background: rgba(255,255,255,0.14);
-  border: 1px solid var(--card-border);
-  padding: 10px 14px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  transition: transform 0.08s ease, background 0.2s ease;
-}
+    <!-- AI (HIGHLIGHTED) -->
+    <section id="ai" class="card highlight">
+      <h2>Artificial Intelligence</h2>
+      <p class="meta">Advanced module • Strong performance</p>
 
-.btn:hover { background: rgba(255,255,255,0.20); transform: translateY(-1px); }
-.btn-outline { background: transparent; box-shadow: none; }
+      <p>
+        Studied AI with a focus on both theory and implementation, including problem-solving techniques, reasoning,
+        and machine learning fundamentals.
+      </p>
 
-main { padding: 18px 0 50px; }
+      <ul class="points">
+        <li>Search algorithms and heuristics (e.g., informed search)</li>
+        <li>Knowledge representation and reasoning concepts</li>
+        <li>Model evaluation and performance thinking</li>
+        <li>Limitations and responsible/ethical considerations</li>
+      </ul>
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  padding: 22px 22px;
-  box-shadow: var(--shadow);
-  margin: 18px 0;
-  backdrop-filter: blur(10px);
-}
+      <p class="pill"><strong>Achievement:</strong> 96% in the Artificial Intelligence module.</p>
+    </section>
 
-.card h2 { margin: 0 0 12px; font-size: 22px; }
-.card h3 { margin: 0 0 10px; font-size: 16px; color: var(--muted); font-weight: 600; }
+    <!-- DISSERTATION (HIGHLIGHTED RESEARCH) -->
+    <section id="research" class="card highlight">
+      <h2>Research Project (Dissertation)</h2>
+      <h3>Lexical Chains for LLM-Generated Text</h3>
+      <p class="meta">Final-year dissertation • NLP / Cohesion Analysis</p>
 
-.grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+      <p>
+        Investigating lexical cohesion in LLM-generated text by building and evaluating lexical chains.
+        The goal is to measure semantic continuity and coherence in generated narratives using both
+        symbolic resources and modern semantic similarity approaches.
+      </p>
 
-.chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.chip {
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--card-border);
-  background: rgba(255,255,255,0.05);
-  color: var(--text);
-  font-size: 14px;
-}
+      <ul class="points">
+        <li>WordNet-based lexical chain construction and analysis</li>
+        <li>Evaluation pipeline for cohesion/continuity across a text</li>
+        <li>Comparison of symbolic vs embedding-based cohesion signals</li>
+        <li>Clear reporting of strengths, limitations, and improvements</li>
+      </ul>
 
-/* Highlighted sections */
-.highlight {
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
-}
+      <p class="pill"><strong>Focus:</strong> Python • NLP • WordNet • LLM text analysis</p>
 
-.meta { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+      <div class="project-links">
+        <a href="#" class="disabled" aria-disabled="true">Paper (In progress)</a>
+        <a href="#" class="disabled" aria-disabled="true">Code (private for now)</a>
+      </div>
+    </section>
 
-.points {
-  margin: 12px 0;
-  padding-left: 18px;
-  color: var(--muted);
-  font-size: 14px;
-}
+    <!-- HIGHLIGHTS (GROUP PROJECT + GAME) -->
+    <section id="highlights" class="card">
+      <h2>Highlighted Coursework</h2>
 
-.pill {
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: 14px;
-  border-left: 3px solid rgba(255,255,255,0.22);
-  padding-left: 12px;
-}
+      <div class="projects">
+        <!-- Group project -->
+        <article class="project featured">
+          <div class="project-top">
+            <h3>Software Engineering Group Project (CSCU9P6)</h3>
+            <span class="tag">Java • OOP • Testing • Teamwork</span>
+          </div>
 
-/* Projects grid */
-.projects {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-@media (max-width: 920px) { .projects { grid-template-columns: 1fr; } }
+          <p>
+            Contributed as a backend-focused developer in a team project. Implemented core classes and unit tests,
+            integrated backend logic with the GUI, and collaborated through GitHub and Teams.
+          </p>
 
-.project {
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 16px;
-  background: rgba(255,255,255,0.04);
-}
+          <ul class="project-features">
+            <li>Developed Participant class (registration, booking, feedback, profile updates)</li>
+            <li>Implemented Notification system for participants/trainers</li>
+            <li>Worked on system launcher lifecycle/state transitions</li>
+            <li>Contributed to ClassRoom scheduling/session/lobby logic</li>
+            <li>Wrote unit tests to validate functionality</li>
+          </ul>
 
-.featured { background: rgba(255,255,255,0.06); }
+          <p class="note">
+            Evidence documented in individual contribution assessment. :contentReference[oaicite:2]{index=2}
+          </p>
 
-.project-top {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 8px;
-}
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Repo (private)</a>
+            <a href="#" class="disabled" aria-disabled="true">Design notes</a>
+          </div>
+        </article>
 
-.project h3 { margin: 0; font-size: 16px; color: var(--text); }
+        <!-- 2D platform game -->
+        <article class="project featured">
+          <div class="project-top">
+            <h3>2D Platform Game (Mario Prototype) — CSCU9N6</h3>
+            <span class="tag">Java • GameCore • Tile Maps • Parallax • Audio/MIDI</span>
+          </div>
 
-.tag {
-  font-size: 12px;
-  color: var(--muted);
-  border: 1px solid var(--card-border);
-  padding: 5px 8px;
-  border-radius: 999px;
-  white-space: nowrap;
-}
+          <p>
+            Built a 2D platform game using a tile-map world with multiple levels, collision handling, animated sprites,
+            parallax scrolling, and event-driven input (keyboard + mouse). Integrated sound effects, a sound filter,
+            and background theme music using MIDI.
+          </p>
 
-.project p { margin: 10px 0 12px; color: var(--muted); }
+          <ul class="project-features">
+            <li>Player + NPC sprites with animation state changes</li>
+            <li>Collision detection/handling for sprites + tile maps</li>
+            <li>At least two levels using interactive tile maps</li>
+            <li>Parallax scrolling for depth illusion</li>
+            <li>Multiple sounds + novel sound filter + MIDI track control</li>
+          </ul>
 
-.project-features {
-  margin: 10px 0 12px;
-  padding-left: 18px;
-  color: var(--muted);
-  font-size: 14px;
-}
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Gameplay Demo</a>
+            <a href="#" class="disabled" aria-disabled="true">Source Code (upload later)</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-.project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
 
-.project-links a {
-  color: var(--text);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.35);
-  padding-bottom: 2px;
-}
-.project-links a:hover { border-bottom-color: rgba(255,255,255,0.9); }
+      <div class="projects">
+        <!-- Android diary app -->
+        <article class="project">
+          <div class="project-top">
+            <h3>Android Diary App</h3>
+            <span class="tag">Java • Android • Room • MVVM</span>
+          </div>
 
-.disabled { opacity: 0.45; pointer-events: none; }
+          <p>
+            Developed a multi-fragment Android application that allows users to create, edit, and manage diary entries
+            with persistent local storage using Room. Implemented SharedViewModel for inter-fragment communication and
+            RecyclerView for entry display.
+          </p>
 
-.contact-list { margin: 10px 0 0; padding-left: 18px; }
-.contact-list a { color: var(--text); }
+          <ul class="project-features">
+            <li>Multi-fragment architecture (date entry + list display)</li>
+            <li>Room database with CRUD operations</li>
+            <li>SharedViewModel for clean data passing</li>
+            <li>Image attachment support and user-friendly UI</li>
+          </ul>
 
-.muted { color: var(--muted); }
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Demo</a>
+            <a href="#" class="disabled" aria-disabled="true">Source Code (upload later)</a>
+          </div>
+        </article>
 
-.note {
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: 14px;
-  border-left: 3px solid rgba(255,255,255,0.22);
-  padding-left: 12px;
-}
+        <!-- NoSQL MongoDB assignment -->
+        <article class="project">
+          <div class="project-top">
+            <h3>NoSQL MongoDB Movies Analytics (CSCU9B4)</h3>
+            <span class="tag">MongoDB • Aggregation Pipeline • Data Querying</span>
+          </div>
 
-.footer { text-align: center; padding: 20px 0 10px; color: var(--muted); font-size: 13px; }
+          <p>
+            Worked with the MongoDB <em>sample_mflix</em> movies collection to design queries and aggregation pipelines.
+            Built a strategy to identify animal-related content and created a personalised rating metric (<strong>myScore</strong>)
+            combining multiple review sources, then ranked the top titles.
+          </p>
+
+          <ul class="project-features">
+            <li>Explored real-world movie dataset fields (genres, cast, year, ratings)</li>
+            <li>Counted animal-related movies vs series (query design + filtering)</li>
+            <li>Computed <strong>myScore</strong> using rating signals (IMDb/Rotten Tomatoes/Metacritic)</li>
+            <li>Returned top 5 recommendations sorted by <strong>myScore</strong> (title + year + score)</li>
+            <li>Produced a concise report describing strategy and results</li>
+          </ul>
+
+          <p class="note">
+            Based on CSCU9B4 assignment specification. :contentReference[oaicite:3]{index=3}
+          </p>
+
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Report (private)</a>
+            <a href="#" class="disabled" aria-disabled="true">Queries (upload later)</a>
+          </div>
+        </article>
+
+        <!-- Portfolio itself -->
+        <article class="project">
+          <div class="project-top">
+            <h3>Portfolio Website (GitHub Pages)</h3>
+            <span class="tag">HTML • CSS • GitHub Pages</span>
+          </div>
+
+          <p>
+            Built and deployed a personal portfolio website using GitHub Pages. Designed a clean structure with
+            highlighted academic sections and a project showcase.
+          </p>
+
+          <div class="project-links">
+            <a href="https://kushalkandel.github.io" target="_blank" rel="noreferrer">Live Site</a>
+            <a href="https://github.com/og-kushal/kushalkandel.github.io" target="_blank" rel="noreferrer">Source Code</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="note">
+        Code links are marked private/upload-later where coursework should not be publicly shared. We can publish
+        “safe” versions (sanitised) for employers when you’re ready.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <span class="muted">your@email.com</span> (replace this)</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/og-kushal" target="_blank" rel="noreferrer">github.com/og-kushal</a></li>
+      </ul>
+      <p class="note">Optional: add LinkedIn link when ready.</p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Kushal Kandel • Built with GitHub Pages</p>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
