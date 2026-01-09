@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kushal | IT Portfolio</title>
+  <title>Kushal Kandel | IT Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,11 +11,14 @@
   <header class="header">
     <div class="container">
       <h1>Kushal Kandel</h1>
-      <p class="subtitle">IT / Computing Student • Building projects step by step</p>
+      <p class="subtitle">Computing Science student • Software + AI + Mobile + Databases</p>
 
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#ai">AI</a>
+        <a href="#research">Research</a>
+        <a href="#highlights">Highlights</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -30,109 +33,277 @@
 
   <main class="container">
 
+    <!-- ABOUT -->
     <section id="about" class="card">
       <h2>About Me</h2>
       <p>
-        Hi, I’m Kushal. I’m building my IT portfolio by learning the fundamentals and creating small projects consistently.
-        I’m interested in software development and practical problem solving. This website will keep improving as I add more projects.
+        I’m a Computing Science student building practical software projects and strengthening my foundations in
+        software engineering, mobile development, databases, and AI. I enjoy turning requirements into working systems
+        and writing clean, testable code.
       </p>
       <p class="note">
-        ✅ Tip: Later, replace this paragraph with your real focus (e.g., Java, Python, Android, Web, Security).
+        This portfolio showcases selected work from modules including Mobile App Development, Artificial Intelligence,
+        Software Engineering (group project), game development, and NoSQL databases.
       </p>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="card">
       <h2>Skills</h2>
 
       <div class="grid">
         <div class="chip-group">
-          <h3>Technical</h3>
+          <h3>Languages</h3>
           <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
             <span class="chip">HTML</span>
             <span class="chip">CSS</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">Git (basic)</span>
           </div>
         </div>
 
         <div class="chip-group">
-          <h3>Core Strengths</h3>
+          <h3>Tools & Platforms</h3>
           <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Android Studio</span>
+            <span class="chip">Eclipse</span>
+            <span class="chip">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="chip-group">
+          <h3>Core Concepts</h3>
+          <div class="chips">
+            <span class="chip">OOP</span>
+            <span class="chip">Unit Testing</span>
+            <span class="chip">MVC/MVVM</span>
+            <span class="chip">Data Modelling</span>
             <span class="chip">Problem Solving</span>
-            <span class="chip">Communication</span>
-            <span class="chip">Teamwork</span>
-            <span class="chip">Learning Fast</span>
+          </div>
+        </div>
+
+        <div class="chip-group">
+          <h3>Interests</h3>
+          <div class="chips">
+            <span class="chip">Mobile Apps</span>
+            <span class="chip">AI / NLP</span>
+            <span class="chip">Databases</span>
+            <span class="chip">Security Awareness</span>
+            <span class="chip">Software Engineering</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- AI (HIGHLIGHTED) -->
+    <section id="ai" class="card highlight">
+      <h2>Artificial Intelligence</h2>
+      <p class="meta">Advanced module • Strong performance</p>
+
+      <p>
+        Studied AI with a focus on both theory and implementation, including problem-solving techniques, reasoning,
+        and machine learning fundamentals.
+      </p>
+
+      <ul class="points">
+        <li>Search algorithms and heuristics (e.g., informed search)</li>
+        <li>Knowledge representation and reasoning concepts</li>
+        <li>Model evaluation and performance thinking</li>
+        <li>Limitations and responsible/ethical considerations</li>
+      </ul>
+
+      <p class="pill"><strong>Achievement:</strong> 96% in the Artificial Intelligence module.</p>
+    </section>
+
+    <!-- DISSERTATION (HIGHLIGHTED RESEARCH) -->
+    <section id="research" class="card highlight">
+      <h2>Research Project (Dissertation)</h2>
+      <h3>Lexical Chains for LLM-Generated Text</h3>
+      <p class="meta">Final-year dissertation • NLP / Cohesion Analysis</p>
+
+      <p>
+        Investigating lexical cohesion in LLM-generated text by building and evaluating lexical chains.
+        The goal is to measure semantic continuity and coherence in generated narratives using both
+        symbolic resources and modern semantic similarity approaches.
+      </p>
+
+      <ul class="points">
+        <li>WordNet-based lexical chain construction and analysis</li>
+        <li>Evaluation pipeline for cohesion/continuity across a text</li>
+        <li>Comparison of symbolic vs embedding-based cohesion signals</li>
+        <li>Clear reporting of strengths, limitations, and improvements</li>
+      </ul>
+
+      <p class="pill"><strong>Focus:</strong> Python • NLP • WordNet • LLM text analysis</p>
+
+      <div class="project-links">
+        <a href="#" class="disabled" aria-disabled="true">Paper (In progress)</a>
+        <a href="#" class="disabled" aria-disabled="true">Code (private for now)</a>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS (GROUP PROJECT + GAME) -->
+    <section id="highlights" class="card">
+      <h2>Highlighted Coursework</h2>
+
+      <div class="projects">
+        <!-- Group project -->
+        <article class="project featured">
+          <div class="project-top">
+            <h3>Software Engineering Group Project (CSCU9P6)</h3>
+            <span class="tag">Java • OOP • Testing • Teamwork</span>
+          </div>
+
+          <p>
+            Contributed as a backend-focused developer in a team project. Implemented core classes and unit tests,
+            integrated backend logic with the GUI, and collaborated through GitHub and Teams.
+          </p>
+
+          <ul class="project-features">
+            <li>Developed Participant class (registration, booking, feedback, profile updates)</li>
+            <li>Implemented Notification system for participants/trainers</li>
+            <li>Worked on system launcher lifecycle/state transitions</li>
+            <li>Contributed to ClassRoom scheduling/session/lobby logic</li>
+            <li>Wrote unit tests to validate functionality</li>
+          </ul>
+
+          <p class="note">
+            Evidence documented in individual contribution assessment. :contentReference[oaicite:2]{index=2}
+          </p>
+
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Repo (private)</a>
+            <a href="#" class="disabled" aria-disabled="true">Design notes</a>
+          </div>
+        </article>
+
+        <!-- 2D platform game -->
+        <article class="project featured">
+          <div class="project-top">
+            <h3>2D Platform Game (Mario Prototype) — CSCU9N6</h3>
+            <span class="tag">Java • GameCore • Tile Maps • Parallax • Audio/MIDI</span>
+          </div>
+
+          <p>
+            Built a 2D platform game using a tile-map world with multiple levels, collision handling, animated sprites,
+            parallax scrolling, and event-driven input (keyboard + mouse). Integrated sound effects, a sound filter,
+            and background theme music using MIDI.
+          </p>
+
+          <ul class="project-features">
+            <li>Player + NPC sprites with animation state changes</li>
+            <li>Collision detection/handling for sprites + tile maps</li>
+            <li>At least two levels using interactive tile maps</li>
+            <li>Parallax scrolling for depth illusion</li>
+            <li>Multiple sounds + novel sound filter + MIDI track control</li>
+          </ul>
+
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Gameplay Demo</a>
+            <a href="#" class="disabled" aria-disabled="true">Source Code (upload later)</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section id="projects" class="card">
       <h2>Projects</h2>
 
       <div class="projects">
+        <!-- Android diary app -->
         <article class="project">
           <div class="project-top">
-            <h3>Portfolio Website (This site)</h3>
+            <h3>Android Diary App</h3>
+            <span class="tag">Java • Android • Room • MVVM</span>
+          </div>
+
+          <p>
+            Developed a multi-fragment Android application that allows users to create, edit, and manage diary entries
+            with persistent local storage using Room. Implemented SharedViewModel for inter-fragment communication and
+            RecyclerView for entry display.
+          </p>
+
+          <ul class="project-features">
+            <li>Multi-fragment architecture (date entry + list display)</li>
+            <li>Room database with CRUD operations</li>
+            <li>SharedViewModel for clean data passing</li>
+            <li>Image attachment support and user-friendly UI</li>
+          </ul>
+
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Demo</a>
+            <a href="#" class="disabled" aria-disabled="true">Source Code (upload later)</a>
+          </div>
+        </article>
+
+        <!-- NoSQL MongoDB assignment -->
+        <article class="project">
+          <div class="project-top">
+            <h3>NoSQL MongoDB Movies Analytics (CSCU9B4)</h3>
+            <span class="tag">MongoDB • Aggregation Pipeline • Data Querying</span>
+          </div>
+
+          <p>
+            Worked with the MongoDB <em>sample_mflix</em> movies collection to design queries and aggregation pipelines.
+            Built a strategy to identify animal-related content and created a personalised rating metric (<strong>myScore</strong>)
+            combining multiple review sources, then ranked the top titles.
+          </p>
+
+          <ul class="project-features">
+            <li>Explored real-world movie dataset fields (genres, cast, year, ratings)</li>
+            <li>Counted animal-related movies vs series (query design + filtering)</li>
+            <li>Computed <strong>myScore</strong> using rating signals (IMDb/Rotten Tomatoes/Metacritic)</li>
+            <li>Returned top 5 recommendations sorted by <strong>myScore</strong> (title + year + score)</li>
+            <li>Produced a concise report describing strategy and results</li>
+          </ul>
+
+          <p class="note">
+            Based on CSCU9B4 assignment specification. :contentReference[oaicite:3]{index=3}
+          </p>
+
+          <div class="project-links">
+            <a href="#" class="disabled" aria-disabled="true">Report (private)</a>
+            <a href="#" class="disabled" aria-disabled="true">Queries (upload later)</a>
+          </div>
+        </article>
+
+        <!-- Portfolio itself -->
+        <article class="project">
+          <div class="project-top">
+            <h3>Portfolio Website (GitHub Pages)</h3>
             <span class="tag">HTML • CSS • GitHub Pages</span>
           </div>
+
           <p>
-            My first published website using GitHub Pages. It will be updated as I build more projects.
+            Built and deployed a personal portfolio website using GitHub Pages. Designed a clean structure with
+            highlighted academic sections and a project showcase.
           </p>
+
           <div class="project-links">
             <a href="https://kushalkandel.github.io" target="_blank" rel="noreferrer">Live Site</a>
             <a href="https://github.com/og-kushal/kushalkandel.github.io" target="_blank" rel="noreferrer">Source Code</a>
           </div>
         </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>Beginner Project (Coming soon)</h3>
-            <span class="tag">Add your next project</span>
-          </div>
-          <p>
-            I’m currently working on my next small project (e.g., calculator, to-do list, or guessing game).
-          </p>
-          <div class="project-links">
-            <a href="#" class="disabled" aria-disabled="true">Demo</a>
-            <a href="#" class="disabled" aria-disabled="true">Code</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>Another Project (Coming soon)</h3>
-            <span class="tag">Future project</span>
-          </div>
-          <p>
-            This slot will be replaced with a real project once I finish building it.
-          </p>
-          <div class="project-links">
-            <a href="#" class="disabled" aria-disabled="true">Demo</a>
-            <a href="#" class="disabled" aria-disabled="true">Code</a>
-          </div>
-        </article>
       </div>
 
       <p class="note">
-        ✅ Tip: Even small projects count. 2–3 good projects is enough for a starter portfolio.
+        Code links are marked private/upload-later where coursework should not be publicly shared. We can publish
+        “safe” versions (sanitised) for employers when you’re ready.
       </p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p>You can reach me here:</p>
-
       <ul class="contact-list">
         <li><strong>Email:</strong> <span class="muted">your@email.com</span> (replace this)</li>
         <li><strong>GitHub:</strong> <a href="https://github.com/og-kushal" target="_blank" rel="noreferrer">github.com/og-kushal</a></li>
-        <!-- Optional LinkedIn -->
-        <!-- <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" rel="noreferrer">linkedin.com/in/YOUR-LINK</a></li> -->
       </ul>
-
-      <p class="note">
-        ✅ Tip: Replace the email and (optional) add LinkedIn later.
-      </p>
+      <p class="note">Optional: add LinkedIn link when ready.</p>
     </section>
 
     <footer class="footer">
